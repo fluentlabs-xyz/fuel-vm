@@ -14,7 +14,7 @@ hex = "0.4"
 rand = "0.8"
 rand_pcg = "0.3"
 rand_seeder = "0.2"
-serde = { version = "1.0", features = ["derive"] }
+serde = { version = "1.0", default-features = false, features = ["derive"] }
 serde_yaml = "0.9"
 sha2 = "0.10"
 thiserror = "1.0"

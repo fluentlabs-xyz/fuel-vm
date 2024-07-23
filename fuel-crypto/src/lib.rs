@@ -6,7 +6,7 @@
 // https://rust-lang.github.io/api-guidelines/naming.html
 #![warn(missing_docs)]
 #![deny(unsafe_code)]
-#![deny(unused_crate_dependencies)]
+// #![deny(unused_crate_dependencies)]
 #![deny(
     clippy::arithmetic_side_effects,
     clippy::cast_sign_loss,

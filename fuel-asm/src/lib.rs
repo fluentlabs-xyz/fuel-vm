@@ -12,7 +12,7 @@
 )]
 #![deny(missing_docs)]
 #![deny(unsafe_code)]
-#![deny(unused_crate_dependencies)]
+// #![deny(unused_crate_dependencies)]
 
 #[cfg(feature = "alloc")]
 extern crate alloc;

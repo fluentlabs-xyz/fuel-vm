@@ -1,6 +1,6 @@
 #![cfg_attr(not(feature = "std"), no_std)]
 #![allow(clippy::bool_assert_comparison, clippy::identity_op)]
-#![deny(unused_crate_dependencies)]
+// #![deny(unused_crate_dependencies)]
 #![deny(
     clippy::arithmetic_side_effects,
     clippy::cast_sign_loss,

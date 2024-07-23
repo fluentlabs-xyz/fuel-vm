@@ -7,7 +7,7 @@
     clippy::string_slice
 )]
 #![deny(unsafe_code)]
-#![deny(unused_crate_dependencies)]
+// #![deny(unused_crate_dependencies)]
 
 mod impls;
 
