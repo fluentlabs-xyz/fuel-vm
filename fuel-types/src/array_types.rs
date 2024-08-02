@@ -36,7 +36,7 @@ macro_rules! key {
         #[derive(
             fuel_types::canonical::Serialize, fuel_types::canonical::Deserialize,
         )]
-        pub struct $i([u8; $s]);
+        pub struct $i(pub [u8; $s]);
 
         key_methods!($i, $s);
 
@@ -58,7 +58,7 @@ macro_rules! key_with_big_array {
         #[derive(
             fuel_types::canonical::Serialize, fuel_types::canonical::Deserialize,
         )]
-        pub struct $i([u8; $s]);
+        pub struct $i(pub [u8; $s]);
 
         key_methods!($i, $s);
 
