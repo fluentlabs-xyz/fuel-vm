@@ -322,6 +322,11 @@ pub mod test_helpers {
             self
         }
 
+        pub fn with_chain_id(&mut self, chain_id: ChainId) -> &mut TestBuilder {
+            self.consensus_params.set_chain_id(chain_id);
+            self
+        }
+
         pub fn base_asset_id(&mut self, base_asset_id: AssetId) -> &mut TestBuilder {
             self.consensus_params.set_base_asset_id(base_asset_id);
             self
@@ -337,6 +342,7 @@ pub mod test_helpers {
             self.builder.with_script_params(*self.get_script_params());
             self.builder.with_fee_params(*self.get_fee_params());
             self.builder.with_base_asset_id(*self.get_base_asset_id());
+            self.builder.with_chain_id(self.get_chain_id());
             self.builder.finalize_checked(self.block_height)
         }
 
