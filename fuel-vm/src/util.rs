@@ -177,13 +177,13 @@ pub mod test_helpers {
 
     pub struct TestBuilder {
         pub rng: StdRng,
-        gas_price: Word,
-        max_fee_limit: Word,
-        script_gas_limit: Word,
-        builder: TransactionBuilder<Script>,
-        storage: MemoryStorage,
-        block_height: BlockHeight,
-        consensus_params: ConsensusParameters,
+        pub gas_price: Word,
+        pub max_fee_limit: Word,
+        pub script_gas_limit: Word,
+        pub builder: TransactionBuilder<Script>,
+        pub storage: MemoryStorage,
+        pub block_height: BlockHeight,
+        pub consensus_params: ConsensusParameters,
     }
 
     impl TestBuilder {
@@ -333,6 +333,7 @@ pub mod test_helpers {
         }
 
         pub fn build(&mut self) -> Checked<Script> {
+            self.builder.script_gas_limit(self.script_gas_limit);
             self.builder.max_fee_limit(self.max_fee_limit);
             self.builder.with_tx_params(*self.get_tx_params());
             self.builder
